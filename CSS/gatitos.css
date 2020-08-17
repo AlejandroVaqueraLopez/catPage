@@ -32,9 +32,12 @@ nav{
     border:3px solid #fff;
     right:20px;
     top:30px;
-    
+    transition: transform .4s;
 }
 
+.button-1:active{
+    transform:scale(.8);
+}
 
 
 .button-1 img{

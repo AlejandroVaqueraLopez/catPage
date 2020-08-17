@@ -6,7 +6,6 @@ function openMenu(e){
     if(e.type=='click'){
         if(toggle==false){
             menu.style.marginLeft = '-40px';
-            
         }
         else if(toggle==true){
             menu.style.marginLeft = '-400px';
