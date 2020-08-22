@@ -39,6 +39,10 @@ nav{
     transform:scale(.8);
 }
 
+.button-1:focus{
+    outline: none;
+}
+
 
 .button-1 img{
     height: 40px;
