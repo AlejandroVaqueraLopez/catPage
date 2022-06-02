@@ -1,18 +1,18 @@
 var toggle = false;
 var menu = document.getElementById('menu');
-var btnMenu = document.getElementById('button-1');
+var btnToggleNav= document.getElementById('btnToggleNav');
 
 function openMenu(e){
     if(e.type=='click'){
         if(toggle==false){
-            menu.style.marginLeft = '-40px';
+            menu.style.marginRight = '0px';
         }
         else if(toggle==true){
-            menu.style.marginLeft = '-400px';
+            menu.style.marginRight = '-500px';
         }
         toggle = !toggle;
     }
 }
 
-btnMenu.onclick = openMenu;
+btnToggleNav.onclick = openMenu;
 
