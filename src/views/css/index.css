@@ -70,7 +70,7 @@ nav{
 }
 
 .menuList li{
-    height: auto;
+    height: 10%;
     width: 100%;
 }
 
@@ -89,7 +89,7 @@ nav{
     box-sizing:border-box;
     height:100%;
     display: flex;
-    align-items:center;
+    align-items:flex-end;
     justify-content:flex-end;
     color:gray;
     transition:all 0.7s;
@@ -109,28 +109,18 @@ nav{
 }
 
 .menuList li:nth-child(1) a span{
-    margin-right:300px;
-    margin-top:8vh;
 }
 
 .menuList li:nth-child(2) a span{
-    margin-right:240px;
-    margin-top:8vh;
 }
 
 .menuList li:nth-child(3) a span{
-    margin-right:180px;
-    margin-top:8vh;
 }
 
 .menuList li:nth-child(4) a span{
-    margin-right:120px;
-    margin-top:8vh
 }
 
 .menuList li:nth-child(5) a span{
-    margin-right:60px;
-    margin-top:8vh
 }
 
 /*section 1*/
