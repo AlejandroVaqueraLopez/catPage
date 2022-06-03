@@ -61,12 +61,13 @@ nav{
 }
 
 .menuList{
-    height: auto;
+    height: 100%;
     width: 100%;
     display: flex;
     flex-direction:column;
     position:absolute;
     top:calc((100% / 2) - 250px);
+    background:indianred;
 }
 
 .menuList li{
@@ -106,23 +107,23 @@ nav{
 }
 
 .menuList li:nth-child(1) a span{
-    margin-left:30%;
+    margin-left:20vh;
 }
 
 .menuList li:nth-child(2) a span{
-    margin-left:38%;
+    margin-left:26vh;
 }
 
 .menuList li:nth-child(3) a span{
-    margin-left:46%;
+    margin-left:32vh;
 }
 
 .menuList li:nth-child(4) a span{
-    margin-left:55%;
+    margin-left:38vh;
 }
 
 .menuList li:nth-child(5) a span{
-    margin-left:64%;
+    margin-left:44vh;
 }
 
 /*section 1*/
