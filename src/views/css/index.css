@@ -21,7 +21,7 @@ nav{
     clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%);
     height: 100vh;
     width: 500px;
-    /*margin-right:-500px;*/
+    margin-right:-500px;
     transition:all .5s;
 }
 @media only screen and (max-width:550px){
@@ -66,7 +66,6 @@ nav{
     display: flex;
     flex-direction:column;
     position:absolute;
-    background:indianred;
 }
 
 .menuList li{
@@ -101,30 +100,16 @@ nav{
     width:100px;
     text-align:start;
     font-size:22px;
-    background:white;
 }
 
 .menuList li a:hover{
     color:#fff;
 }
 
-.menuList li:nth-child(1) a span{
-}
 
-.menuList li:nth-child(2) a span{
-}
-
-.menuList li:nth-child(3) a span{
-}
-
-.menuList li:nth-child(4) a span{
-}
-
-.menuList li:nth-child(5) a span{
-}
 
 /*section 1*/
-.section-1{
+.aboutSection{
     width: 100%;
     height: auto;
     background: #3c3c3c;
@@ -167,16 +152,16 @@ nav{
     font-family: 'Pangolin', cursive;
 }
 
-.section-2{
-    height: 600px;
+.servicesSection{
+    height: 100vh;
     width: 100%;
     background-image: url('../images/section-2-bg.png');
     background-position: center;
     background-size: cover;
 }
 
-.section-3{
-     background: #3c3c3c;
+.galerySection{
+    background: #3c3c3c;
     display: flex;
     justify-content: center;
     align-items: center;
