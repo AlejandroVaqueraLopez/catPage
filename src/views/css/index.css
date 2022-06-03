@@ -20,8 +20,8 @@ nav{
     background:#000;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%);
     height: 100vh;
-    width: 70vh;
-    margin-right:-70vh;
+    width: 500px;
+    /*margin-right:-500px;*/
     transition:all .5s;
 }
 @media only screen and (max-width:550px){
@@ -61,17 +61,16 @@ nav{
 }
 
 .menuList{
-    height: 100%;
+    height: 100vh;
     width: 100%;
     display: flex;
     flex-direction:column;
     position:absolute;
-    top:calc((100% / 2) - 250px);
     background:indianred;
 }
 
 .menuList li{
-    height: 50px;
+    height: auto;
     width: 100%;
 }
 
@@ -91,8 +90,10 @@ nav{
     height:100%;
     display: flex;
     align-items:center;
+    justify-content:flex-end;
     color:gray;
     transition:all 0.7s;
+    outline:solid black;
 }
 
 .menuList li a span{
@@ -100,6 +101,7 @@ nav{
     width:100px;
     text-align:start;
     font-size:22px;
+    background:white;
 }
 
 .menuList li a:hover{
@@ -107,23 +109,28 @@ nav{
 }
 
 .menuList li:nth-child(1) a span{
-    margin-left:20vh;
+    margin-right:300px;
+    margin-top:8vh;
 }
 
 .menuList li:nth-child(2) a span{
-    margin-left:26vh;
+    margin-right:240px;
+    margin-top:8vh;
 }
 
 .menuList li:nth-child(3) a span{
-    margin-left:32vh;
+    margin-right:180px;
+    margin-top:8vh;
 }
 
 .menuList li:nth-child(4) a span{
-    margin-left:38vh;
+    margin-right:120px;
+    margin-top:8vh
 }
 
 .menuList li:nth-child(5) a span{
-    margin-left:44vh;
+    margin-right:60px;
+    margin-top:8vh
 }
 
 /*section 1*/

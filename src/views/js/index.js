@@ -9,7 +9,7 @@ function openMenu(e){
             btnToggleNav.children[0].src = "./icons/menu-icon.png";
         }
         else if(toggle==true){
-            menu.style.marginRight = '-70vh';
+            menu.style.marginRight = '-500px';
             btnToggleNav.children[0].src = "./icons/menu-icon-white.png";
         }
         toggle = !toggle;
