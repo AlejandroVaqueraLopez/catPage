@@ -15,7 +15,7 @@ let pcDesign = true;
 const navHome = document.querySelector("#navHome");
 const navAbout = document.querySelector("#navAbout");
 const navServices = document.querySelector("#navServices");
-const navGalery = document.querySelector("#navGalery");
+const navProducts = document.querySelector("#navProducts");
 const navContact = document.querySelector("#navContact");
 
 function openMenu(e){
@@ -70,17 +70,17 @@ function designAssign(pcDesign){
         navServices.style.marginRight = `${marginRightServices - 130}px`;
 
         let marginRightGalery = calcMiniCO(mainAngle,window.innerHeight * 0.5);
-        navGalery.style.marginRight = `${marginRightGalery - 130}px`;
+        navProducts.style.marginRight = `${marginRightGalery - 130}px`;
 
-        let marginRightContact = calcMiniCO(mainAngle,window.innerHeight * 0.4);
-        navContact.style.marginRight = `${marginRightContact - 130}px`;
+        let marginRightClients = calcMiniCO(mainAngle,window.innerHeight * 0.4);
+        navClients.style.marginRight = `${marginRightClients - 130}px`;
 
     }else{//max with 500px
         navHome.style.marginRight = `calc(70vw - 100px)`;
         navAbout.style.marginRight = `calc(60vw - 100px)`;
         navServices.style.marginRight = `calc(50vw - 100px)`;
-        navGalery.style.marginRight = `calc(40vw - 100px)`;
-        navContact.style.marginRight = `calc(30vw - 100px)`;
+        navProducts.style.marginRight = `calc(40vw - 100px)`;
+        navClients.style.marginRight = `calc(30vw - 100px)`;
     }
 }
 

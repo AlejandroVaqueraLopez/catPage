@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
+
     <header>
        <button id="btnToggleNav" class="btnToggleNav">
            <img id="btnToggleNavImg" src="./icons/menu-icon-white.png" alt="toggle">
@@ -15,8 +16,7 @@
         <nav id="menu">
             <ul class="menuList">
                 <li>
-                    <a href="#">
-                        <span></span>
+                    <a href="#" class="nonSelect">
                     </a>
                 </li>
                 <li>
@@ -25,83 +25,87 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="#aboutSection">
                         <span id="navAbout">About</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="#servicesSection">
                         <span id="navServices">Services</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        <span id="navGalery">Galery</span>
+                    <a href="#productsSection">
+                        <span id="navProducts">Products</span>
                     </a>
                 </li>
                <li>
-                    <a href="#">
-                        <span id="navContact">Contact</span>
+                    <a href="#clientsSection">
+                        <span id="navClients">Clients</span>
                     </a>
                </li>
                <li>
-                    <a href="#">
-                        <span></span>
+                    <a href="#" class="nonSelect">
                     </a>
                </li>
                <li>
-                    <a href="#">
-                        <span></span>
+                    <a href="#" class="nonSelect">
                     </a>
                </li>
                <li>
-                    <a href="#">
-                        <span></span>
+                    <a href="#" class="nonSelect">
                     </a>
                </li>
                <li>
-                    <a href="#">
-                        <span></span>
+                    <a href="#" class="nonSelect">
                     </a>
                </li>
             </ul>
         </nav>
+
+       <div class="mainTitleContainer">
+           <h1>CatPage</h1>
+           <h2>Everything for your best friend</h2>
+       </div>
     </header>
     
     
     <section id="aboutSection" class="aboutSection">
-       <article class="article-1">
+       <div class="aboutContainer">
             <div class="div-1">
-                <img src="./icons/cat-2.png" alt="cat-2">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, aperiam.</p>
+                <img src="./icons/cat-1.png" alt="cat-2">
+                <p>Somos proveedores de los mejores accesorios para tu mascota. </p>
             </div>
             <div class="div-2">
-                <img src="./icons/cat-1.png" alt="cat-1">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, aperiam.</p>
+                <img src="./icons/play-cat-icon.png" alt="cat-1">
+                <p>Desde productos para pelaje hasta juguetes para sus momentos creativos.</p>
             </div>
             <div class="div-3">
-                <img src="./icons/cat-3.png" alt="cat-3">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, aperiam.</p>
+                <img src="./icons/plus-five-icon.png" alt="cat-3">
+                <p>Contamos con mas de 5 anios de experiencia haciendo feliz a esa mascota que es parte de la familia.</p>
             </div>
-       </article>
+       </div>
     </section>
-    
     
     <section id="servicesSection" class="servicesSection">
-        hola
+        <div id="servicesContainer" class="servicesContainer">
+            <!--auto-generated-->
+        </div>
     </section>
-
     
-    <section id="galerySection" class="galerySection">
-        <article class="article-3">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime possimus amet a earum voluptas, deleniti veniam numquam praesentium accusamus nemo autem laboriosam eum eveniet, quos voluptatem dolore temporibus sit fuga.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime possimus amet a earum voluptas, deleniti veniam numquam praesentium accusamus nemo autem laboriosam eum eveniet, quos voluptatem dolore temporibus sitoluptatem dolore temporibus sit fuga.
-        </article>
+    <section id="productsSection" class="productsSection">
+        <div id="productsContainer" class="productsContainer">
+            <!--auto-generated-->
+        </div>
     </section>
 
-    <section id="contactSection" class="contactSection">
-        <article class="article-3">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime possimus amet a earum voluptas, deleniti veniam numquam praesentium accusamus nemo autem laboriosam eum eveniet, quos voluptatem dolore temporibus sit fuga.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime possimus amet a earum voluptas, deleniti veniam numquam praesentium accusamus nemo autem laboriosam eum eveniet, quos voluptatem dolore temporibus sitoluptatem dolore temporibus sit fuga.
-        </article>
+    <section id="clientsSection" class="clientsSection">
+        <h2>Some of our cute clients</h2>
+
+        <div id="gridGaleryClients" class="gridGaleryClients">
+            <!--auto-generated-->
+        </div>
+
     </section>
 
     
@@ -123,6 +127,8 @@
  
     <script src="./js/nav.js"></script>
     <script src="./js/scrollDown.js"></script>
+    <script src="./js/data.js"></script>
+    <script src="./js/template.js"></script>
 	
 </body>
 </html>
