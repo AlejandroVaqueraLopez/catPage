@@ -1,0 +1,43 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+}
+
+.clientsSection{
+    background: black;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    box-sizing:border-box;
+}.clientsSection > h2{
+    font-size:35px;
+    color:#fff;
+    font-family:"ubuntu";
+    text-shadow: 3px 3px 5px black;/*Y 5px X 10px Z 5px black*/
+}.clientsSection .gridGaleryClients{
+    width:70%;
+    min-width:280px;
+    max-width:800px;
+    height:auto;
+    overflow:hidden;
+    outline:solid red;
+    display:grid;
+    justify-content:center;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+}.gridGaleryClients .galeryItemContainer{
+    margin:10px;
+    outline:solid red;
+    background-size:cover;
+    background-position:center;
+    width:250px;
+    height:150px;
+}.galeryItemContainer .galeryPanel{
+    display:none;
+}.galeryItemContainer img{
+    width:200px;
+    height:auto;
+}

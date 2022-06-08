@@ -142,14 +142,15 @@ function createClientItem(obj){
     const {name,image,ig} = obj;
     /*
      *
-    <div class="galeryItemContainer">
-        <div class="galeryPanel">
-            <div>
-                <img src="instagram icon url" alt="">
+            <div class="galeryItemContainer" style="background-image:url('${image}')">
+                <div class="galeryPanel">
+                    <span class="clientName">${name}</span>
+                    <a href="${ig}">
+                        <img src="./icons/instagram-icon.png" alt="instagram icon">
+                    </a>
+                </div>
+                <!--<img src="${image}" alt="client image">-->
             </div>
-            <img src="" alt="">
-        </div>
-    </div>
         * */
     return `
             <div class="galeryItemContainer" style="background-image:url('${image}')">
