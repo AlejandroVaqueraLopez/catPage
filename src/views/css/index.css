@@ -1,9 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');/*font-family: 'Pangolin', cursive;*/
 /*global*/
 *{
     margin:0;
     padding:0;
+    scroll-behavior:smooth;/*for scrolls in navigation*/
 }
+
+.btnAdd{
+    width:auto;
+    height:auto;
+    padding:5px 10px;
+    background:none;
+    border:none;
+    outline:none;
+    color:#fff;
+    font-size:20px;
+    border:2px solid #fff;
+    transition:all 0.3s;
+}.btnAdd:hover{
+    cursor:pointer;
+    color:#3c3c3c;
+    box-shadow: inset 6.5em 0 0 0 #fff;
+}
+
 
 /*header*/
 header{
@@ -12,6 +30,9 @@ header{
     background-image: url('../images/header-bg.jpg');
     background-size:cover;
     background-position: top;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
 nav{
     position: fixed;
@@ -23,13 +44,15 @@ nav{
     width: 500px;
     margin-right:-500px;
     transition:all .5s;
+    z-index:2;
 }
-@media only screen and (max-width:550px){
+@media only screen and (max-width:500px){
     nav{
         width: 100%;
     }
 }
 
+/*nav button*/
 .btnToggleNav{
     position: fixed;
     height: auto;
@@ -37,7 +60,7 @@ nav{
     right:30px;
     top:15px;
     transition: transform .4s;
-    z-index:2;
+    z-index:3;
     background:none;
     border:none;
 }
@@ -60,6 +83,7 @@ nav{
     width: 45px;
 }
 
+/*menuList*/
 .menuList{
     height: 100vh;
     width: 100%;
@@ -73,12 +97,20 @@ nav{
     width: 100%;
 }
 
+.menuList li:nth-child(1) a,
+.menuList li:nth-child(7) a,
+.menuList li:nth-child(8) a,
+.menuList li:nth-child(9) a,
+.menuList li:nth-child(10) a{
+    user-select:none;
+}
 
-.menuList li img{
-    height: 25px;
-    width: 25px;
-    margin-left:35%;
-    outline:solid red;
+.menuList li:nth-child(1) a:hover,
+.menuList li:nth-child(7) a:hover,
+.menuList li:nth-child(8) a:hover,
+.menuList li:nth-child(9) a:hover,
+.menuList li:nth-child(10) a:hover{
+    cursor:initial;
 }
 
 .menuList li a{
@@ -92,7 +124,6 @@ nav{
     justify-content:flex-end;
     color:gray;
     transition:all 0.7s;
-    outline:solid black;
 }
 
 .menuList li a span{
@@ -106,88 +137,344 @@ nav{
     color:#fff;
 }
 
+/*mainTitleContainer*/
+.mainTitleContainer{
+    height:250px;
+    width:80%;
+    max-width:600px;
+    min-width:250px;
+    background:rgba(0,0,0,0.2);
+    box-shadow: 3px 5px 9px black;/*Y 5px X 10px Z 5px black*/
+    backdrop-filter:blur(2px);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:0px 25px;
+    box-sizing:border-box;
+}.mainTitleContainer h1{
+    font-size:85px;
+    color:#fff;
+    font-family:"ubuntu";
+    text-shadow: 3px 3px 5px black;/*Y 5px X 10px Z 5px black*/
+}.mainTitleContainer h2{
+    font-size:20px;
+    color:#fff;
+    font-family:"ubuntu";
+    text-shadow: 2px 2px 3px black;/*Y 5px X 10px Z 5px black*/
+    text-align:center;
+}
+
+@media only screen and (max-width:500px){
+    /*mainTitleContainer*/
+    .mainTitleContainer h1{
+        font-size:55px;
+        color:#fff;
+        font-family:"ubuntu";
+        text-shadow: 3px 5px 7px black;/*Y 5px X 10px Z 5px black*/
+    }.mainTitleContainer h2{
+        font-size:17px;
+        color:#fff;
+        font-family:"ubuntu";
+        text-shadow: 3px 3px 4px black;/*Y 5px X 10px Z 5px black*/
+    }
+}
 
 
+/*1000 - ~*/
 /*section 1*/
 .aboutSection{
     width: 100%;
-    height: auto;
+    height: 100vh;
     background: #3c3c3c;
     display: flex;
     justify-content: center;
     align-items: center;
-    
-}
-.article-1{
+}.aboutContainer{
     height: auto;
-    width: 80%;
-   
+    width: 100%;
+    max-width:1200px;
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.article-1 div{
-  
-    width: 200px;
-    height: auto;
-    margin:50px;
+    outline:solid blue;
+}.aboutContainer div{
+    width: 280px;
+    height: 280px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius:10px;
-    border:3px solid #fff;
-}
-
-.article-1 div img{
+    background:rgba(0,0,0,0.2);
+    box-shadow: 3px 5px 9px black;/*Y 5px X 10px Z 5px black*/
+    backdrop-filter:blur(2px);
+}.aboutContainer div img{
     height: 100px;
     width: 100px;
-}
-.article-1 div p{
+}.aboutContainer div p{
+    height:100px;
+    width:70%;
     text-align:center;
     font-size:18px;
     padding:10px;
     color:#fff;
-    font-family: 'Pangolin', cursive;
+    font-family:"ubuntu";
+    text-shadow: 3px 3px 4px black;/*Y 5px X 10px Z 5px black*/
+}
+
+/*551 - 1000*/
+@media only screen and (max-width:1000px){
+    .aboutContainer{
+        height: auto;
+        width: 100%;
+        display: flex;
+        flex-direction:column;
+        justify-content: space-around;
+        align-items:center;
+    }.aboutContainer div{
+        width: 70%;
+        height: 20vh;
+        display: flex;
+        flex-direction:row;
+        justify-content: center;
+        align-items: center;
+        margin:15px 0px;
+    }.aboutContainer div img{
+        width:20%;
+        height:90%;
+        font-size:15px;
+        margin:0px;
+        padding:0px;
+        text-align:start;
+        outline:solid yellow;
+        margin-left:15px;
+        box-sizing:border-box;
+        padding:10px 0px;
+        object-fit:contain;
+    }.aboutContainer div p{
+        width:60%;
+        max-width:300px;
+        height:90%;
+        font-size:18px;
+        margin:0px;
+        padding:0px;
+        outline:solid yellow;
+        margin-left:15px;
+        box-sizing:border-box;
+        padding:10px 0px;
+        text-align:start;
+        display:flex;
+        justify-content:flex-start;
+        align-items:center;
+    }
+}
+
+/*mobile*/
+@media only screen and (max-width:500px){
+    .aboutContainer div{
+        width: 90%;
+    }.aboutContainer div p{
+        font-size:15px;
+    }
 }
 
 .servicesSection{
     height: 100vh;
     width: 100%;
-    background-image: url('../images/section-2-bg.png');
+    background-image: url('../images/section-2-bg.webp');
     background-position: center;
     background-size: cover;
+    display:flex;
+    justify-content:center;
+}.servicesContainer{
+    height: 100vh;
+    width: auto;
+    display: flex;
+    align-items:center;
+    outline:solid blue;
+    overflow-x:auto;
+}.servicesContainer .card{
+    width: 280px;
+    min-width:280px;
+    height: 80%;
+    margin:0px 20px;
+    min-height:400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background:rgba(0,0,0,0.3);
+    box-shadow: 3px 5px 9px black;/*Y 5px X 10px Z 5px black*/
+    backdrop-filter:blur(5px);
+    color:#fff;
+    font-family:"ubuntu";
+    padding:15px 20px;
+    box-sizing:border-box;
+}.servicesContainer .card .txtTitle{
+    font-size:32px;
+}.servicesContainer .card .txtPrice{
+    font-size:35px;
+}.servicesContainer .card .serviceListHeader{
+    /*outline:solid red;*/
+    height:auto;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    margin-top:15px;
+    
+}.servicesContainer .card .serviceListHeader span{
+    width:33%;
+    font-size:15px;
+    font-weight:bold;
+    text-align:center;
+
+}.servicesContainer .card .serviceList{
+    /*outline:solid white;*/
+    height:auto;
+    width:100%;
+    list-style:none;
+    margin:5px 0px 15px 0px;
+}.servicesContainer .card .serviceList li{
+    height:45px;
+    width:100%;
+   /* outline:solid purple;*/
+    border-top:1px solid #fff;
+    display:flex;
+}.servicesContainer .card .serviceList li div{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:33%;
+}.servicesContainer .card .serviceList li div span{
+    display:inline-block;
+    width:100%;
+    font-size:15px;
+    text-align:center;
 }
 
-.galerySection{
+@media only screen and (max-width:500px){
+    .servicesContainer .card{
+        width:100vw;
+    }
+}
+
+
+.productsSection{
     background: #3c3c3c;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: auto;
+    height: 100vh;
     width: 100%;
-    
+}.productsContainer{
+    height: 100vh;
+    width: auto;
+    display: flex;
+    align-items:center;
+    outline:solid blue;
+    overflow-x:auto;
+    box-sizing:border-box;
+}.productsContainer .card{
+    width: auto;
+    height: 80%;
+    margin:0px 20px;
+    min-height:400px;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+
+    background:rgba(0,0,0,0.3);
+    box-shadow: 3px 5px 9px black;/*Y 5px X 10px Z 5px black*/
+    /*backdrop-filter:blur(5px);*/
+    color:#fff;
+    font-family:"ubuntu";
+    padding:20px;
+    box-sizing:border-box;
+}.productsContainer .txtTitle{
+    font-size:32px;
+    width:calc(100% - 30px);
+}.productsList{/*ul*/
+    display:flex;
+    margin-top:10px;
+    height:80%;
+}.productsList li{
+    background:rgba(0,0,0,0.3);
+    box-shadow: 3px 5px 9px black;/*Y 5px X 10px Z 5px black*/
+    width:280px;
+
+    list-style:none;
+    margin:0px 15px;
+    padding:15px;
+    box-sizing:border-box;
+}.productsList li div{
+    height:auto;
+    width:100%;
+    padding:8px 0px;
+}.productsList li div:nth-child(1),.productsList li div:nth-child(2){/*plan and quantity fields*/
+    height:5%;
+}.productsList li div:nth-child(3){/*description field*/
+    height:20%;
+}.productsList li div:nth-child(4){
+    height:50%;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+}.productsList li div img{/*image field*/
+    height:100%;
+    width:auto;
 }
 
-.article-3{
-    width:75%;
-    height: auto;
-    color: #fff;
-    margin:60px 0px 60px 0px;
-    font-size: 20px;
-    font-family: 'Pangolin', cursive;
-    text-align: justify;
-    padding:25px;
-    border-radius:10px;
-    border:3px solid #fff;
-    
+@media only screen and (max-width:500px){
+    .productsList li div img{
+        height:150px;
+        width:auto;
+    }
+}
+
+
+.clientsSection{
+    background: black;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    box-sizing:border-box;
+}.clientsSection > h2{
+    font-size:35px;
+    color:#fff;
+    font-family:"ubuntu";
+    text-shadow: 3px 3px 5px black;/*Y 5px X 10px Z 5px black*/
+}.clientsSection .gridGaleryClients{
+    width:70%;
+    min-width:280px;
+    max-width:800px;
+    height:auto;
+    overflow:hidden;
+    outline:solid red;
+    display:grid;
+    justify-content:center;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+}.gridGaleryClients .galeryItemContainer{
+    margin:10px;
+    outline:solid red;
+    background-size:cover;
+    background-position:center;
+    width:250px;
+    height:150px;
+}.galeryItemContainer .galeryPanel{
+    display:none;
+}.galeryItemContainer img{
+    width:200px;
+    height:auto;
 }
 
 footer{
     height: auto;
     width: 100%;
-    background: #000;
+    background: rgba(0,0,0,0.8);
     color: #fff;
     font-family: 'Pangolin', cursive;
     display: flex;
