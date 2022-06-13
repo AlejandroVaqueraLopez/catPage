@@ -34,6 +34,18 @@ header{
     align-items:center;
     justify-content:center;
 }
+.favicon{
+    position: absolute;
+    height: 55px;
+    width: 55px;
+    left:30px;
+    top:15px;
+    z-index:1;
+}.favicon img{
+    height:100%;
+    width:100%;
+}
+
 nav{
     position: fixed;
     right:0;
