@@ -1,11 +1,19 @@
+/*medias*/
+/*
+  mobile 0px -> 500px 
+  tablet/laptop 501px -> 1000px
+  big screen 1001px -> ~px
+*/
 *{
     margin:0px;
     padding:0px;
     box-sizing:border-box;
 }
 
+
+
 .clientsSection{
-    background: black;
+    /*background: black;*/
     display: flex;
     flex-direction:column;
     justify-content: center;
@@ -40,4 +48,20 @@
 }.galeryItemContainer img{
     width:200px;
     height:auto;
+}
+
+@media only screen and (min-width:1000px){/*big screen*/
+    .clientsSection{
+        background:darkblue;
+    }
+}
+@media only screen and (max-width:1000px){/*laptop/tablet*/
+    .clientsSection{
+        background:gray;
+    }
+}
+@media only screen and (max-width:500px){/*mobile*/
+    .clientsSection{
+        background:#000;
+    }
 }
