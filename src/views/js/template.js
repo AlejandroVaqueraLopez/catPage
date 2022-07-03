@@ -110,6 +110,7 @@ function createProductCard(obj){
         `;
 } 
 
+//product item generator
 function generateProductItem(itemList){
     let itemListTemplate = "";
     itemList.forEach((item)=>{
@@ -135,36 +136,6 @@ function generateProductItem(itemList){
     return itemListTemplate;
 }
 
-//galery of client list generation
-const gridGaleryClients = document.querySelector("#gridGaleryClients");
-
-function createClientItem(obj){
-    const {name,image,ig} = obj;
-    /*
-     *
-            <div class="galeryItemContainer" style="background-image:url('${image}')">
-                <div class="galeryPanel">
-                    <span class="clientName">${name}</span>
-                    <a href="${ig}">
-                        <img src="./icons/instagram-icon.png" alt="instagram icon">
-                    </a>
-                </div>
-                <!--<img src="${image}" alt="client image">-->
-            </div>
-        * */
-    return `
-            <div class="galeryItemContainer" style="background-image:url('${image}')">
-                <div class="galeryPanel">
-                    <span class="clientName">${name}</span>
-                    <a href="${ig}">
-                        <img src="./icons/instagram-icon.png" alt="instagram icon">
-                    </a>
-                </div>
-                <!--<img src="${image}" alt="client image">-->
-            </div>
-            `;
-} 
-
 //this global function adds all the templates at once
 function addCard(){
     //adding plans
@@ -177,12 +148,6 @@ function addCard(){
     products.forEach((obj)=>{
         const newCard = createProductCard(obj);
         productsContainer.innerHTML += newCard;
-    });
-
-    //adding client images
-    clients.forEach((obj)=>{
-        const newItem = createClientItem(obj);
-        gridGaleryClients.innerHTML += newItem;
     });
 }
 

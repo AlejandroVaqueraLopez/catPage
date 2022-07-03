@@ -208,7 +208,7 @@ nav{
     max-width:1200px;
     display: flex;
     justify-content: space-around;
-    outline:solid blue;
+    /*outline:solid blue;*/
 }.aboutContainer div{
     width: 280px;
     height: 280px;
@@ -257,7 +257,7 @@ nav{
         margin:0px;
         padding:0px;
         text-align:start;
-        outline:solid yellow;
+        /*outline:solid yellow;*/
         margin-left:15px;
         box-sizing:border-box;
         padding:10px 0px;
@@ -269,7 +269,7 @@ nav{
         font-size:18px;
         margin:0px;
         padding:0px;
-        outline:solid yellow;
+        /*outline:solid yellow;*/
         margin-left:15px;
         box-sizing:border-box;
         padding:10px 0px;
@@ -302,7 +302,7 @@ nav{
     width: auto;
     display: flex;
     align-items:center;
-    outline:solid blue;
+    /*outline:solid blue;*/
     overflow-x:auto;
 }.servicesContainer .card{
     width: 280px;
@@ -382,7 +382,7 @@ nav{
     width: auto;
     display: flex;
     align-items:center;
-    outline:solid blue;
+    /*outline:solid blue;*/
     overflow-x:auto;
     box-sizing:border-box;
 }.productsContainer .card{
@@ -444,7 +444,6 @@ nav{
     }
 }
 
-
 .clientsSection{
     background: black;
     display: flex;
@@ -454,77 +453,52 @@ nav{
     height: 100vh;
     width: 100%;
     box-sizing:border-box;
-}.clientsSection > h2{
-    font-size:35px;
-    color:#fff;
-    font-family:"ubuntu";
-    text-shadow: 3px 3px 5px black;/*Y 5px X 10px Z 5px black*/
-}.clientsSection .gridGaleryClients{
-    width:70%;
-    min-width:280px;
-    max-width:800px;
-    height:auto;
-    overflow:hidden;
-    outline:solid red;
-    display:grid;
-    justify-content:center;
-    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
-}.gridGaleryClients .galeryItemContainer{
-    margin:10px;
-    outline:solid red;
-    background-size:cover;
-    background-position:center;
-    width:250px;
-    height:150px;
-}.galeryItemContainer .galeryPanel{
-    display:none;
-}.galeryItemContainer img{
-    width:200px;
-    height:auto;
-}
+}  
 
 footer{
     height: auto;
+    min-height:200px;
     width: 100%;
     background: rgba(0,0,0,0.8);
     color: #fff;
     font-family: 'Pangolin', cursive;
     display: flex;
-    
     flex-wrap:wrap;
     justify-content: space-around;
     align-items: center;
+    padding:0px 30px;
 }
 
 .info-footer{
-    
     width: 60%;
-    height: auto;
-    margin:50px 0px 50px 0px;
-    font-size:20px;
-    text-align: justify;
-}
-
-.social-media{
- 
-    width: auto;
+    min-width:250px;
     height: auto;
     margin:50px 0px 50px 0px;
     font-size:18px;
-   
+    text-align: justify;
+    font-family:"ubuntu";
+}
+
+.social-media{
+    width: auto;
+    height: auto;
+    font-size:18px;
     border-radius:10px;
-    border:3px solid #fff;
     padding:10px;
 }
 
-.social-media h2{
-    
+.social-media h3{
     text-align: center;
-    
+    font-family:"ubuntu";
 }
 
 .social-media img{
-    height: 70px;
-    width: 70px;
+    height: 50px;
+    width: 50px;
+    margin:0px 8px 0px 8px;
+}
+.social-media a:nth-child(4) img{
+    height: 47px;
+    width: 47px;
     margin:0px 8px 0px 8px;
 }
